@@ -1,6 +1,6 @@
 # C# CRUD Application
 
-![C# CRUD Application](CSharp_CRUD_Application.png)
+![C# CRUD Application](C#_CRUD_Web_Application.png)
 
 This repository contains a simple C# CRUD (Create, Read, Update, Delete) application built using the MVC pattern.
 
@@ -24,8 +24,7 @@ This repository contains a simple C# CRUD (Create, Read, Update, Delete) applica
 
 - C#
 - ASP.NET Core MVC
-- Entity Framework Core
-- SQL Server (or your preferred database)
+- MySQL
 - Visual Studio (or Visual Studio Code)
 
 ## Setup
@@ -33,13 +32,13 @@ This repository contains a simple C# CRUD (Create, Read, Update, Delete) applica
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
+    git clone https://github.com/danthalomous/C-Sharp_CRUD_Application.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd your-repository
+    cd CST-323-Milestone-Project
     ```
 
 3. **Configure the database:**
@@ -59,16 +58,18 @@ Once the application is up and running, you can interact with it through its web
 
 ## Endpoints
 
-- **GET /Products:** Retrieve all entities.
-- **GET /Products/{id}:** Retrieve an entity by ID.
-- **POST /Products:** Create a new entity.
-- **PUT /Products/{id}:** Update an entity by ID.
-- **DELETE /Products/{id}:** Delete an entity by ID.
+- **GET /Home/Superheroes:** Retrieve all entities.
+- **POST /Home/Superheroes/CreateSuperhero:** Create a new entity.
+- **POST /Home/Superheroes/UpdateSuperhero/{superHero):** Update an entity by model (which has the ID).
+- **POST /Home/Superheroes/DeleteSuperhero/{superHero}:** Delete an entity by model (which has the ID).
 
 ## Screenshots
 
-- Here are the results of the /Products GET request:
-  ![Products Page](Products_Page.png)
+- Below is a screenshot of the home page:
+  ![Home Page](HomePage.png)
 
-- Here is what the /Products/Add form page looks like:
-  ![New Product Page](New_Product_Page.png)
+- Here is what the /Home/Superheroes GET looks like (all the entries in the database):
+  ![Superheroes Page](AllSuperheroes.png)
+
+- Here is what the /Home/Superheroes/CreateUpdate form page looks like (the update form is almost identical to this):
+  ![New Superhero Page](Cretae-Update.png)
