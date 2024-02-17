@@ -1,0 +1,53 @@
+﻿@model CST_323_Milestone.Models.SuperheroModel
+
+<h4>Create Superhero</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateSuperhero">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Alias" class="control-label"></label>
+                <input asp-for="Alias" class="form-control" />
+                <span asp-validation-for="Alias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Powers" class="control-label"></label>
+                <input asp-for="Powers" class="form-control" />
+                <span asp-validation-for="Powers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PowerRating" class="control-label"></label>
+                <input asp-for="PowerRating" class="form-control" />
+                <span asp-validation-for="PowerRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Alignment" class="control-label"></label>
+                <input asp-for="Alignment" class="form-control" />
+                <span asp-validation-for="Alignment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qty" class="control-label"></label>
+                <input asp-for="Qty" class="form-control" />
+                <span asp-validation-for="Qty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

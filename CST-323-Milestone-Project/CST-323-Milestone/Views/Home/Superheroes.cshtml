@@ -1,0 +1,91 @@
+﻿@model IEnumerable<CST_323_Milestone.Models.SuperheroModel>
+
+<div>
+    <form asp-action="Create">
+        <div class="form-group">
+            <input type="submit" value="Create a Superhero" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Alias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Powers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PowerRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alignment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qty)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Powers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PowerRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alignment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+            <td>
+                <form method="post" action="Update">
+                    <input type="hidden" name="SuperheroID" value="@item.SuperheroID" />
+                    <input type="hidden" name="Alias" value="@item.Alias" />
+                    <input type="hidden" name="Name" value="@item.Name" />
+                    <input type="hidden" name="Powers" value="@item.Powers" />
+                    <input type="hidden" name="PowerRating" value="@item.PowerRating" />
+                    <input type="hidden" name="Alignment" value="@item.Alignment" />
+                    <input type="hidden" name="Price" value="@item.Price" />
+                    <input type="hidden" name="Qty" value="@item.Qty" />
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+                <td>
+                    <form method="post" action="DeleteSuperhero">
+                        <input type="hidden" name="SuperheroID" value="@item.SuperheroID" />
+                        <input type="hidden" name="Alias" value="@item.Alias" />
+                        <input type="hidden" name="Name" value="@item.Name" />
+                        <input type="hidden" name="Powers" value="@item.Powers" />
+                        <input type="hidden" name="PowerRating" value="@item.PowerRating" />
+                        <input type="hidden" name="Alignment" value="@item.Alignment" />
+                        <input type="hidden" name="Price" value="@item.Price" />
+                        <input type="hidden" name="Qty" value="@item.Qty" />
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

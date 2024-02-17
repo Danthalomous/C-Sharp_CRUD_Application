@@ -1,0 +1,30 @@
+body {
+    background-color: dimgray;
+}
+
+main {
+    margin-bottom: 60px;
+    background-color: maroon;
+    border: 5px solid goldenrod;
+}
+
+p, h2, th, td {
+    color: white;
+    text-align: center;
+}
+
+.container {
+    color: white;
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border-color: dimgray;
+}
