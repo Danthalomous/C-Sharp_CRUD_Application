@@ -1,6 +1,6 @@
 # C# CRUD Application
 
-![C# CRUD Application](C#_CRUD_Web_Application.png)
+![C# CRUD Application](Banner.png)
 
 This repository contains a simple C# CRUD (Create, Read, Update, Delete) application built using the MVC pattern.
 
